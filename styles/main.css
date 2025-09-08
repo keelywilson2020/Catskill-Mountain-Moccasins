@@ -854,13 +854,16 @@ section p {
 
 /* Responsive design for makers section */
 @media (max-width: 768px) {
-    .maker-profile {
-        flex-direction: column;
-        text-align: center;
+}
+
+@media (max-width: 600px) {
+    .side-nav {
+        width: 100vw;
+        left: -100vw;
+        transition: left 0.3s ease;
     }
-    
-    .maker-profile.right-image {
-        flex-direction: column;
+    .side-nav.active {
+        left: 0;
     }
 
     nav {
@@ -1753,19 +1756,6 @@ section p {
     .side-nav.active {
         left: 0;
     }
-    
-    .hero {
-        height: 50vh;
-        min-height: 350px;
-    }
-    
-    .hero h2 {
-        font-size: 2rem;
-        font-family: 'Luminari', 'IM FELL English', 'Georgia', 'Times New Roman', serif;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
-    
     .hero p {
         font-size: 1rem;
         padding: 0 1rem;
