@@ -862,6 +862,21 @@ section p {
     .maker-profile.right-image {
         flex-direction: column;
     }
+
+    nav {
+        justify-content: flex-end;
+        padding: 0 1rem;
+    }
+    nav h1 {
+        position: static;
+        font-size: 1.1rem;
+        margin-left: auto;
+        order: 2;
+    }
+    .menu-toggle {
+        order: 1;
+        margin-right: 0;
+    }
     
     .maker-image {
         flex: none;
