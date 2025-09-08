@@ -1731,8 +1731,12 @@ section p {
 
 @media (max-width: 480px) {
     .side-nav {
-        width: 100%;
-        left: -100%;
+        width: 100vw;
+        left: -100vw;
+        transition: left 0.3s ease;
+    }
+    .side-nav.active {
+        left: 0;
     }
     
     .hero {
