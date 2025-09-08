@@ -858,39 +858,39 @@ section p {
 
 @media (max-width: 600px) {
     .side-nav {
-        width: 100vw;
-        left: -100vw;
-        transition: left 0.3s ease;
-    }
-    .side-nav.active {
-        left: 0;
-    }
-
-    nav {
-        justify-content: flex-end;
-        padding: 0 1rem;
-    }
-    nav h1 {
-        position: static;
-        font-size: 1.1rem;
-        margin-left: auto;
-        order: 2;
-    }
-    .menu-toggle {
-        order: 1;
-        margin-right: 0;
-    }
-    
-    .maker-image {
-        flex: none;
-        max-width: 200px;
-        margin: 0 auto;
-    }
-    
-    .artisan-img {
-        height: 150px;
-    }
         body, html {
+            width: 100vw;
+            overflow-x: hidden;
+            font-size: 1rem;
+            background: #f8f8f8;
+        }
+        nav h1 {
+            font-size: 1.25rem;
+            text-align: right;
+            width: 100%;
+            margin: 0;
+        }
+        .cta-button, .feature-button {
+            font-size: 1.1rem;
+            padding: 0.7rem 1.2rem;
+            border-radius: 6px;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .side-nav-menu li, .side-nav-menu a {
+            font-size: 1rem;
+            padding: 0.7rem 0.5rem;
+            width: 100%;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .feature-box {
+            width: 100%;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            padding: 0.8rem;
+        }
             width: 100vw;
             overflow-x: hidden;
             font-size: 1.1rem;
