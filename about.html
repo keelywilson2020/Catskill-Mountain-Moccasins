@@ -8,7 +8,11 @@
     <style>
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        .tab-button.active { /* Add your active button styles here */ }
+        .tab-button.active {
+            background-color: #8b4513;
+            color: #fff;
+            border: 2px solid #a0522d;
+        }
 
         /* Renaissance Festival Schedule Styling */
         .renaissance-schedule {
@@ -137,6 +141,166 @@
             .schedule-table th,
             .schedule-table td {
                 padding: 0.6em 0.8em;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Custom Options Section Styling */
+        .custom-option-section {
+            margin: 2em 0;
+        }
+
+        .custom-option-section h3 {
+            font-size: 2em;
+            color: #8b4513;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .option-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+
+        .tab-option, .heel-option {
+            background: #f8f6f2;
+            border: 2px solid #d4c4a8;
+            border-radius: 8px;
+            padding: 1.5em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tab-photo-row, .heel-photo-row {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+        }
+
+        .tab-photo-row span, .heel-photo-row span {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: #e2d7c3;
+            border-radius: 4px;
+            line-height: 60px;
+            text-align: center;
+            font-weight: bold;
+            color: #8b4513;
+        }
+
+        /* Artisan Profile Styling */
+        .maker-profile {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            margin-bottom: 3em;
+            background: rgba(255,255,255,0.7);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 2em 1em;
+            gap: 2em;
+        }
+        .maker-profile.left-image .maker-image {
+            order: 0;
+        }
+        .maker-profile.left-image .maker-text {
+            order: 1;
+        }
+        .maker-profile.right-image {
+            flex-direction: row-reverse;
+        }
+        .maker-profile .maker-image {
+            flex: 0 0 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+        .maker-profile .maker-text {
+            flex: 1 1 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media (max-width: 900px) {
+            .maker-profile {
+                flex-direction: column !important;
+            }
+            .maker-profile.right-image {
+                flex-direction: column !important;
+            }
+            .maker-profile .maker-image, .maker-profile .maker-text {
+                width: 100%;
+            }
+        }
+
+        .artisan-img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        /* Famous Footwear Section */
+        .famous-gallery {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+        }
+
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        .gallery-caption {
+            margin-top: 0.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Boot Height Section */
+        .boot-height-chart {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+        }
+
+        .boot-height-chart th, .boot-height-chart td {
+            padding: 0.8em;
+            text-align: center;
+            border: 1px solid #e2d7c3;
+        }
+
+        .boot-height-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        .grid-row {
+            display: contents;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .tab-photo-row span, .heel-photo-row span {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .boot-height-chart th, .boot-height-chart td {
+                padding: 0.6em;
                 font-size: 0.9em;
             }
         }
@@ -279,7 +443,7 @@
                         <!-- Artisan 2 - Image Right, Text Left -->
                         <div class="maker-profile right-image">
                             <div class="maker-text">
-                                <h3>Lynn Collins: Salinda, CO; Making since 1979</h3>
+                                <h3>Lynn Collins: Salida, CO; Making since 1979</h3>
                                 <p>After purchasing his first pair of custom footwear at the age of 16, Lynn knew that his calling in life was to create comfortable footwear for other people. He was fortunate to meet and apprentice with several moccasin makers in northern California where he lived at the time, before heading off on his own, eventually joining the Catskills family of artisans. Forty-six years and several thousand pairs of moccasins later, Lynn is still enjoying his craft and going strong at it! When not making moccasins, he enjoys spending time with his family, riding his horses and exploring the beautiful southern Colorado mountains where he lives.</p>
                             </div>
                             <div class="maker-image">
@@ -348,7 +512,7 @@
                         <!-- Artisan 8 - Image Right, Text Left -->
                         <div class="maker-profile right-image">
                             <div class="maker-text">
-                                <h3>Suellyn Pena: Junction, CO; Making since 1980</h3>
+                                <h3>Suellyn Pena: Grand Junction, CO; Making since 1980</h3>
                                 <p>Living in California, Suellyn first came into contact with our moccasins through a friend who was involved in selling, as well as making them. She purchased her first pair around 1978 and wondered to what degree she could interpret design in leather, through appliques and other techniques. With a move to Aspen in May of 1980, she was able to get a job with some moccasin Makers there. Little did she know it would turn into a life's work, but here she is 40 years later, still loving the work! Suellyn specializes in intricate appliques and layered work, interpreting our customers' dreams and ideas, while adding her own, and creating comfortable leather footwear that they will enjoy for many years.</p>
                             </div>
                             <div class="maker-image">
@@ -367,7 +531,7 @@
                             </div>
                         </div>
 
-                        <!-- Artisan 8 - Image Right, Text Left -->
+                        <!-- Artisan 10 - Image Right, Text Left -->
                         <div class="maker-profile right-image">
                             <div class="maker-text">
                                 <h3>Maxime Simmer: Gibsonville, NC; Making since 2019</h3>
@@ -378,7 +542,7 @@
                             </div>
                         </div>
 
-                        <!-- Artisan 9 - Image Left, Text Right -->
+                        <!-- Artisan 11 - Image Left, Text Right -->
                         <div class="maker-profile left-image">
                             <div class="maker-image">
                                 <img src="images/artisans/andrea.jpg" alt="Artisan 9" class="artisan-img" style="max-width: 260px; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); background: #f8f6f2;">
@@ -627,6 +791,80 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Tabs Section -->
+            <section id="tabs" class="custom-option-section">
+              <h3>Tab Options</h3>
+              <div class="option-content">
+                <div class="tab-option">
+                  <p><strong>Standard</strong> - Our standard tabs are a stitched triangular tab made from bullhide, included at no extra charge in our basic moccasin design. Available in whatever color you want, this option is on us! </p>
+                  <div class="tab-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="tab-option">
+                  <p><strong>Laminated</strong> - An easy and subtle way to add a little "pop" to your tabs, a laminated tab includes a thin layer of deer hide, for those who want that extra splash of color. Laminated tabs with contrasting stitching especially make our hearts happy! </p>
+                  <div class="tab-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="tab-option">
+                  <p><strong>Shaped</strong> - Made from bullhide, shaped tabs are ideal for simple, one-color customizations. Anything from leaves to feathers to flames, shaped tabs are a fun way to add a specialty touch to your design. Have something particular in mind? Was your nickname in high school "Lightning Bolt?" Sure, we can do that!</p>
+                  <div class="tab-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="tab-option">
+                  <p><strong>Carved</strong> - With carved tabs, the sky is the limit for creativity. This option allows us to include the most amount of detail in the smallest amount of space. With each one being hand-carved, dyed, and painted, carved tabs are endlessly customizable, and truly fall into the "whatever you can think of" category of creation. </p>
+                  <div class="tab-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="tab-option">
+                  <p><strong>Natural</strong> - Like the rough and rugged look? Us too! These tabs are cut from the natural edge of the buffalo hide, so each one is a little different, in the true "mountain man" style. Want an even more rugged look? No problem! We'd be happy to add a natural deerhide underlay!</p>
+                  <div class="tab-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Heels Section -->
+            <section id="heels" class="custom-option-section">
+              <h3>Heel Options</h3>
+              <div class="option-content">
+                <div class="heel-option">
+                  <p><strong>Standard</strong> - Our standard heel is made from bullhide, and included at no extra charge in our basic moccasin design. Available in whatever color you want, this option is on us! </p>
+                  <div class="heel-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="heel-option">
+                  <p><strong>Shaped</strong> - We have several options for shaped heel pieces, including our popular Points & Curves design, Lynn's Flower Heel, and others, all available with or without a complementary deerhide underlay. Have a new idea for us? We'd be happy to help make that a reality! </p>
+                  <div class="heel-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="heel-option">
+                  <p><strong>Stitched Appliques</strong> - Ideal for simple embellishments, stitched appliques are a great way to add a little extra customization to your heel pieces.</p>
+                  <div class="heel-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="heel-option">
+                  <p><strong>Carved Appliques</strong> - Just like with our carved tabs, a carved heel piece is the best way to incorporate the most amount of detail in the least amount of space. With each one being hand-carved, dyed, and painted, carved heel pieces are endlessly customizable, and truly fall into the "whatever you can think of" category of creation.</p>
+                  <div class="heel-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+                <div class="heel-option">
+                  <p><strong>Burned</strong> - A burned heel piece is a great way to incorporate designs with a fair amount of line work, without adding any extra material to the heel itself. </p>
+                  <div class="heel-photo-row">
+                    <span>PHOTO</span> <span>PHOTO</span> <span>PHOTO</span>
+                  </div>
+                </div>
+              </div>
+            </section>
         </section>
     </main>  
 
